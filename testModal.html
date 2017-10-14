@@ -50,13 +50,18 @@
     #email_part {
       clear: both;
     }
+    #btnModal {
+      top: 10%;
+      left: 10%;
+      position: relative;
+    }
   </style>
 
 </head>
 <body>
-  <button id="btnModal" class="btn btn-primary">Show</button>
+  <button id="btnModal" class="btn btn-primary">Send Email</button>
   <div id="myModal" >
-  <form action="http://localhost:8080/send-email" method="post" name="modalForm" onsubmit="return validateForm()" >
+  <form action="http://localhost:8080/send-email" method="post" name="modalForm" onsubmit="return validateForm()" target="_blank">
       <div class="form-group">
         <div class="col-sm-8">
           <h5  style="color: red">NRB Tickets Predict Analytics</h5>
@@ -166,6 +171,7 @@
             <option>21</option>
             <option>22</option>
             <option>23</option>
+            <option>24</option>
           </select>
         </div>
         <div class="col-sm-3">
@@ -230,6 +236,7 @@
             <option>57</option>
             <option>58</option>
             <option>59</option>
+            <option>60</option>
           </select>
         </div>
       </div>

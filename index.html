@@ -10,20 +10,18 @@
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
-    .row {
-      padding: 0;
-      margin-left: 100px;
-      display: -webkit-flex; /* Safari */
-      display: flex;
+    #graph1 {
+      margin: 0 5% 0 5%;
     }
-    .row > div {
-      display: -webkit-flex; /* Safari */
+    .row {
+      position: relative;
+      display: -webkit-flex; Safari
       display: flex;
+      left: 15%;
     }
     h2 {
       text-align: center;
     }
-
   </style>
 
   <script>
@@ -37,16 +35,20 @@
 
   <h2>NRB Tickets Trending View</h2>
   <div id="includedContent"></div>
-  <div id="graph1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  <h2>Sort By Problem Type</h2>
-  <div class="row">
-    <div id="graph2L" ></div>
-    <div id="graph2R" "></div>
-  </div>
-  <h2>Sort By Device Model</h2>
-  <div class="row">
-    <div id="graph3L" ></div>
-    <div id="graph3R" ></div>
+  <div id="graph1" ></div>
+  <div>
+    <h2>Sort By Problem Type</h2>
+    <div class="row ">
+      <div id="graph2L" ></div>
+      <div id="graph2R" class="right" "></div>
+    </div>
+    <br>
+    <p style="clear: both;"></p>
+    <h2>Sort By Device Model</h2>
+    <div class="row ">
+      <div id="graph3L" ></div>
+      <div id="graph3R" class="right" ></div>
+    </div>
   </div>
 
 
@@ -228,7 +230,6 @@
         chart: {
           type: 'bar'
         },
-
         xAxis: {
           categories: top10.reduce((acc, ele) => [...acc, ele.key], []),
           title: {
